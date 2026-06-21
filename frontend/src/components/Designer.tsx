@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { Wand2, MessageSquarePlus, Info, Dice5, BookmarkPlus, ChevronDown, Copy, Check, X } from 'lucide-react';
+import { Wand2, MessageSquarePlus, Dice5, BookmarkPlus, ChevronDown, Copy, Check, X } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ImageUpload } from './ImageUpload';
