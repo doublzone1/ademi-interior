@@ -352,19 +352,6 @@ export function Designer() {
             </motion.button>
           </div>
 
-          {isPollinations && (
-            <motion.div
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="card border-accent-500/30 bg-accent-500/5 flex gap-3"
-            >
-              <Info className="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" />
-              <div className="text-sm">
-                <p className="font-medium mb-0.5">{t('free.title')}</p>
-                <p className="text-fg-2">{t('free.text')}</p>
-              </div>
-            </motion.div>
-          )}
 
           <div className="grid lg:grid-cols-2 gap-5">
             <div className="space-y-5">
