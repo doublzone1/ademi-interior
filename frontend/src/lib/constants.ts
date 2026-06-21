@@ -104,7 +104,7 @@ export const ASPECT_RATIO_OPTIONS: SimpleOption[] = [
 export const ASPECT_RATIO_LABELS: LocalizedNames<string> = {
   ru: { auto: 'Авто (4:3)', square: 'Квадрат (1:1)', landscape: 'Пейзаж (16:9)', portrait: 'Портрет (3:4)', wide: 'Широкий (2.4:1)' },
   en: { auto: 'Auto (4:3)', square: 'Square (1:1)', landscape: 'Landscape (16:9)', portrait: 'Portrait (3:4)', wide: 'Wide (2.4:1)' },
-  kk: { auto: 'Авто (4:3)', square: 'Шаршы (1:1)', landscape: 'Пейзаж (16:9)', portrait: 'Портрет (3:4)', wide: 'Кең (2.4:1)' },
+  ky: { auto: 'Авто (4:3)', square: 'Чарчы (1:1)', landscape: 'Пейзаж (16:9)', portrait: 'Портрет (3:4)', wide: 'Кең (2.4:1)' },
 };
 
 export const QUICK_PROMPTS_KEYS = [
@@ -150,10 +150,10 @@ export const QUICK_PROMPTS_LABELS: Record<Locale, Record<(typeof QUICK_PROMPTS_K
     highCeiling: 'high ceiling', wood: 'wood floor', rug: 'rug', pendants: 'pendants',
     art: 'artworks', open: 'open plan', books: 'books', mirror: 'mirror',
   },
-  kk: {
-    cozy: 'жайлы', plants: 'өсімдіктер', windows: 'үлкен терезелер', fireplace: 'камин',
-    highCeiling: 'биік төбе', wood: 'ағаш еден', rug: 'кілем', pendants: 'шамдар',
-    art: 'кескіндер', open: 'ашық жоспар', books: 'кітаптар', mirror: 'айна',
+  ky: {
+    cozy: 'жайлуу', plants: 'өсүмдүктөр', windows: 'чоң терезелер', fireplace: 'камин',
+    highCeiling: 'бийик чатыр', wood: 'жыгач пол', rug: 'килем', pendants: 'чырактар',
+    art: 'сүрөттөр', open: 'ачык план', books: 'китептер', mirror: 'күзгү',
   },
 };
 
@@ -173,11 +173,11 @@ export const ROOM_LABELS: LocalizedNames<string> = {
     studio: 'Studio', outdoor: 'Outdoor',
     gym: 'Home gym', sunroom: 'Sunroom', nursery: 'Nursery', garage: 'Garage/workshop',
   },
-  kk: {
-    living_room: 'Қонақ', bedroom: 'Жатын', kitchen: 'Ас үй', bathroom: 'Жуыну',
-    dining_room: 'Ас бөлме', home_office: 'Кабинет', kids_room: 'Балалар',
-    hallway: 'Дәліз', studio: 'Студия', outdoor: 'Террасса',
-    gym: 'Спортзал', sunroom: 'Күн бөлмесі', nursery: 'Нәресте бөлмесі', garage: 'Гараж',
+  ky: {
+    living_room: 'Мейманкана', bedroom: 'Жаткана', kitchen: 'Ашкана', bathroom: 'Ванна',
+    dining_room: 'Тамак бөлмөсү', home_office: 'Кабинет', kids_room: 'Балдар',
+    hallway: 'Коридор', studio: 'Студия', outdoor: 'Тышкы',
+    gym: 'Спортзал', sunroom: 'Күн бөлмөсү', nursery: 'Бала бөлмөсү', garage: 'Гараж',
   },
 };
 
@@ -196,12 +196,12 @@ export const STYLE_LABELS: LocalizedNames<string> = {
     artdeco: 'Art Deco', rustic: 'Rustic', tropical: 'Tropical', classic: 'Classic',
     mediterranean: 'Mediterranean', wabi_sabi: 'Wabi-sabi', cottagecore: 'Cottagecore', maximalist: 'Maximalist',
   },
-  kk: {
-    modern: 'Заманауи', minimalist: 'Минимализм', scandinavian: 'Скандинав',
+  ky: {
+    modern: 'Заманбап', minimalist: 'Минимализм', scandinavian: 'Скандинав',
     industrial: 'Лофт', bohemian: 'Бохо', midcentury: 'Mid-century',
-    farmhouse: 'Ферма', luxury: 'Люкс', coastal: 'Теңіз', japanese: 'Japandi',
+    farmhouse: 'Фермалык', luxury: 'Люкс', coastal: 'Деңиз', japanese: 'Japandi',
     artdeco: 'Ар-деко', rustic: 'Рустик', tropical: 'Тропик', classic: 'Классика',
-    mediterranean: 'Жерорта теңізі', wabi_sabi: 'Wabi-sabi', cottagecore: 'Коттедж', maximalist: 'Максимализм',
+    mediterranean: 'Жер орто деңизи', wabi_sabi: 'Wabi-sabi', cottagecore: 'Коттедж', maximalist: 'Максимализм',
   },
 };
 
@@ -228,16 +228,16 @@ export const STYLE_DESCRIPTIONS: LocalizedNames<string> = {
     mediterranean: 'Terracotta, arches, stone', wabi_sabi: 'Imperfection and nature',
     cottagecore: 'Florals, vintage, cozy', maximalist: 'Bold, layered, eclectic',
   },
-  kk: {
-    modern: 'Заманауи трендтер', minimalist: 'Қарапайым және функционалды',
-    scandinavian: 'Жеңіл ағаш, жайлылық', industrial: 'Кірпіш, метал, бетон',
-    bohemian: 'Тоқыма, өсімдіктер', midcentury: 'Ретро 50-60-шы',
-    farmhouse: 'Ағаш, винтаж', luxury: 'Мрамор, алтын',
-    coastal: 'Ақ-көк палитра', japanese: 'Дзен және табиғи',
-    artdeco: 'Геометрия және гламур', rustic: 'Ағаш және тас',
-    tropical: 'Өсімдіктер мен ратан', classic: 'Зергерлік әсемдік',
-    mediterranean: 'Терракота, доғалар, тас', wabi_sabi: 'Кемшілдік және табиғат',
-    cottagecore: 'Гүлдер, винтаж, жайлы', maximalist: 'Жарқын, қабатты, эклектика',
+  ky: {
+    modern: 'Заманбап тренддер', minimalist: 'Жөнөкөй жана функционалдуу',
+    scandinavian: 'Жеңил жыгач, жайлуулук', industrial: 'Кирпич, металл, бетон',
+    bohemian: 'Текстиль, өсүмдүктөр', midcentury: 'Ретро 50-60-чу',
+    farmhouse: 'Жыгач, винтаж', luxury: 'Мрамор, алтын',
+    coastal: 'Ак-көк палитра', japanese: 'Дзен жана табигый',
+    artdeco: 'Геометрия жана гламур', rustic: 'Жыгач жана таш',
+    tropical: 'Өсүмдүктөр менен ратан', classic: 'Оймо жана сулуулук',
+    mediterranean: 'Терракота, жаалар, таш', wabi_sabi: 'Кемчилик жана табигат',
+    cottagecore: 'Гүлдөр, винтаж, жайлуу', maximalist: 'Жарык, катмарлуу, эклектика',
   },
 };
 
@@ -260,45 +260,45 @@ export const PALETTE_LABELS: LocalizedNames<string> = {
     navy_brass: 'Navy & brass', blush_gold: 'Blush & gold',
     emerald_gold: 'Emerald & gold',
   },
-  kk: {
-    warm_neutrals: 'Жылы бейтарап', cool_neutrals: 'Салқын бейтарап',
-    earth_tones: 'Жер тондары', monochrome: 'Монохром', pastel: 'Пастель',
-    jewel_tones: 'Асыл тастар', ocean_blue: 'Мұхит', forest_green: 'Орман',
-    warm_sunset: 'Күн батуы', cool_lavender: 'Лаванда', bold_red: 'Қызыл',
-    charcoal_gold: 'Графит және алтын', sage_terracotta: 'Шалфей',
-    navy_brass: 'Көк және жез', blush_gold: 'Қызғылт',
-    emerald_gold: 'Зүміріт',
+  ky: {
+    warm_neutrals: 'Жылуу бейтарап', cool_neutrals: 'Суук бейтарап',
+    earth_tones: 'Жер тондору', monochrome: 'Монохром', pastel: 'Пастель',
+    jewel_tones: 'Баалуу таштар', ocean_blue: 'Океан', forest_green: 'Токой',
+    warm_sunset: 'Күн батышы', cool_lavender: 'Лаванда', bold_red: 'Кызыл',
+    charcoal_gold: 'Графит жана алтын', sage_terracotta: 'Шалфей',
+    navy_brass: 'Көк жана жез', blush_gold: 'Кызгылт',
+    emerald_gold: 'Зүмүрөт',
   },
 };
 
 export const LIGHTING_LABELS: LocalizedNames<string> = {
   ru: { natural_day: 'Дневной', golden_hour: 'Золотой час', evening: 'Вечер', night: 'Ночь', bright: 'Яркий' },
   en: { natural_day: 'Daylight', golden_hour: 'Golden hour', evening: 'Evening', night: 'Night', bright: 'Bright' },
-  kk: { natural_day: 'Күндіз', golden_hour: 'Алтын сағат', evening: 'Кеш', night: 'Түн', bright: 'Жарық' },
+  ky: { natural_day: 'Күндүзгү', golden_hour: 'Алтын саат', evening: 'Кечки', night: 'Түнкү', bright: 'Жарык' },
 };
 
 export const CAMERA_LABELS: LocalizedNames<string> = {
   ru: { wide: 'Широкий', standard: 'Стандарт', corner: 'Угол', detail: 'Деталь' },
   en: { wide: 'Wide', standard: 'Standard', corner: 'Corner', detail: 'Detail' },
-  kk: { wide: 'Кең', standard: 'Стандарт', corner: 'Бұрыш', detail: 'Деталь' },
+  ky: { wide: 'Кең', standard: 'Стандарт', corner: 'Бурч', detail: 'Деталь' },
 };
 
 export const DENSITY_LABELS: LocalizedNames<string> = {
   ru: { minimal: 'Мало', balanced: 'Баланс', rich: 'Богато' },
   en: { minimal: 'Sparse', balanced: 'Balanced', rich: 'Rich' },
-  kk: { minimal: 'Аз', balanced: 'Баланс', rich: 'Бай' },
+  ky: { minimal: 'Аз', balanced: 'Баланс', rich: 'Мол' },
 };
 
 export const MATERIAL_LABELS: LocalizedNames<string> = {
   ru: { default: 'Авто', wood: 'Дерево', marble: 'Мрамор', concrete: 'Бетон', fabric: 'Текстиль', glass: 'Стекло' },
   en: { default: 'Auto', wood: 'Wood', marble: 'Marble', concrete: 'Concrete', fabric: 'Fabric', glass: 'Glass' },
-  kk: { default: 'Авто', wood: 'Ағаш', marble: 'Мрамор', concrete: 'Бетон', fabric: 'Мата', glass: 'Шыны' },
+  ky: { default: 'Авто', wood: 'Жыгач', marble: 'Мрамор', concrete: 'Бетон', fabric: 'Кездеме', glass: 'Айнек' },
 };
 
 export const MODEL_LABELS: LocalizedNames<string> = {
   ru: { flux: 'Flux (качество)', turbo: 'Turbo (быстро)' },
   en: { flux: 'Flux (quality)', turbo: 'Turbo (fast)' },
-  kk: { flux: 'Flux (сапа)', turbo: 'Turbo (жылдам)' },
+  ky: { flux: 'Flux (сапа)', turbo: 'Turbo (тез)' },
 };
 
 export const MAX_FILE_SIZE = 10 * 1024 * 1024;
