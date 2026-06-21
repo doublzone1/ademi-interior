@@ -313,7 +313,6 @@ export function Designer() {
     toast.success(t('history.restore'));
   };
 
-  const isPollinations = providerInfo?.provider === 'pollinations';
   const canSubmit = !loading && (!providerInfo?.imageRequired || !!imageFile);
 
   // Ctrl+Enter / Cmd+Enter to generate
