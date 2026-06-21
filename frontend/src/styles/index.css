@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root[data-theme='dark'],
+  :root:not([data-theme]) {
+    --bg-base: #172638;
+    --bg-elev: rgba(255, 255, 255, 0.04);
+    --bg-elev-strong: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.15);
+    --text-primary: #f4f7fb;
+    --text-secondary: #cadcec;
+    --text-muted: #9bbfdc;
+    --shadow: rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+
+  :root[data-theme='light'] {
+    --bg-base: #f4f7fb;
+    --bg-elev: rgba(255, 255, 255, 0.7);
+    --bg-elev-strong: rgba(255, 255, 255, 0.9);
+    --border: rgba(15, 30, 50, 0.08);
+    --border-strong: rgba(15, 30, 50, 0.16);
+    --text-primary: #172638;
+    --text-secondary: #2a5279;
+    --text-muted: #427fb1;
+    --shadow: rgba(15, 30, 50, 0.1);
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    background-image:
+      radial-gradient(at 20% 20%, rgba(66, 127, 177, 0.18) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(232, 137, 64, 0.12) 0px, transparent 50%),
+      radial-gradient(at 100% 80%, rgba(66, 127, 177, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    @apply bg-accent-500/40 text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .glass-strong {
+    background-color: var(--bg-elev-strong);
+    border: 1px solid var(--border-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold
+           rounded-xl shadow-lg shadow-accent-500/20
+           hover:shadow-accent-500/40 hover:scale-[1.02]
+           active:scale-[0.98]
+           transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5
+           font-medium rounded-xl
+           transition-all duration-200;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .btn-secondary:hover {
+    background-color: var(--bg-elev-strong);
+    border-color: var(--border-strong);
+  }
+
+  .icon-btn {
+    @apply inline-flex items-center justify-center w-9 h-9 rounded-lg transition-all;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .icon-btn:hover {
+    background-color: var(--bg-elev-strong);
+    border-color: var(--border-strong);
+  }
+
+  .card {
+    @apply glass rounded-2xl p-6;
+  }
+
+  .heading {
+    @apply font-display font-bold tracking-tight;
+    color: var(--text-primary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .input {
+    @apply w-full rounded-xl p-3 text-sm transition-all
+           focus:outline-none focus:border-accent-400/60;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium
+           transition-all cursor-pointer select-none;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .chip:hover {
+    background-color: var(--bg-elev-strong);
+  }
+  .chip-active {
+    background-color: rgba(232, 137, 64, 0.15);
+    border-color: rgba(232, 137, 64, 0.5);
+    color: var(--text-primary);
+  }
+
+  .option-card {
+    @apply text-left p-3 rounded-xl border transition-all;
+    background-color: var(--bg-elev);
+    border-color: var(--border);
+  }
+  .option-card:hover {
+    background-color: var(--bg-elev-strong);
+    border-color: var(--border-strong);
+  }
+  .option-card-active {
+    background-color: rgba(232, 137, 64, 0.15);
+    border-color: rgba(232, 137, 64, 0.6);
+    box-shadow: 0 8px 24px -8px rgba(232, 137, 64, 0.25);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-fg { color: var(--text-primary); }
+  .text-fg-2 { color: var(--text-secondary); }
+  .text-fg-3 { color: var(--text-muted); }
+}
