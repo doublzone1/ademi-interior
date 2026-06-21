@@ -16,8 +16,8 @@ export function createApp(): Application {
   // CORS
   app.use(
     cors({
-      origin: env.CORS_ORIGIN.split(',').map((s) => s.trim()),
-      credentials: true,
+      origin: env.CORS_ORIGIN === '*' ? '*' : env.CORS_ORIGIN.split(',').map((s) => s.trim()),
+      credentials: false,
     })
   );
 
